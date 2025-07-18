@@ -1,0 +1,232 @@
+[17-Jul-2025 21:47:57 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 21:49:06 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 21:49:29 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 21:50:21 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 21:51:23 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 21:52:03 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 21:52:21 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 21:53:01 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 22:01:27 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 22:07:28 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "Security" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:2
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 2
+[17-Jul-2025 23:26:02 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\Security::createPassword() in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:4
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 4
+[17-Jul-2025 23:26:05 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\Security::createPassword() in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:4
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 4
+[17-Jul-2025 23:27:25 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\Security::createPassword() in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:4
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 4
+[17-Jul-2025 23:35:11 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\Security::createPassword() in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:4
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 4
+[17-Jul-2025 23:43:56 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\Security::createPassword() in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:4
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 4
+[17-Jul-2025 23:46:20 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\Security::createPassword() in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:4
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 4
+[17-Jul-2025 23:48:35 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\Security::createPassword() in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php:4
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php on line 4
+[17-Jul-2025 23:49:20 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\db\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[17-Jul-2025 23:49:20 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\db\resposeHTTP" not found in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\db\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[17-Jul-2025 23:53:39 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\db\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[17-Jul-2025 23:53:39 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\db\resposeHTTP" not found in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\db\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[17-Jul-2025 23:53:57 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\db\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[17-Jul-2025 23:53:57 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\db\resposeHTTP" not found in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\db\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[17-Jul-2025 23:56:47 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[17-Jul-2025 23:56:47 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\DB\resposeHTTP" not found in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[18-Jul-2025 00:04:13 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[18-Jul-2025 00:04:13 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\DB\resposeHTTP" not found in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\DB\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[18-Jul-2025 00:04:34 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[18-Jul-2025 00:04:34 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\DB\resposeHTTP" not found in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[18-Jul-2025 00:12:54 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[18-Jul-2025 00:12:54 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\responseHTTP::status500() in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[18-Jul-2025 00:14:46 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[18-Jul-2025 00:14:46 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\responseHTTP::status500() in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[18-Jul-2025 00:17:09 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[18-Jul-2025 00:17:09 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\responseHTTP::status500() in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:30
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php on line 30
+[18-Jul-2025 00:22:31 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', '123456789', Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(17): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+[18-Jul-2025 00:26:53 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 00:56:17 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\userController" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:12
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 12
+[18-Jul-2025 00:58:39 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\userController" not found in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:12
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 12
+[18-Jul-2025 01:03:22 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Config\responseHTTP::status404() in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:15
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 15
+[18-Jul-2025 02:07:18 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 02:39:31 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 02:39:31 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tipo_usuario' cannot be null in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:48
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(48): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 02:41:51 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 02:41:51 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tipo_usuario' cannot be null in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:48
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(48): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
