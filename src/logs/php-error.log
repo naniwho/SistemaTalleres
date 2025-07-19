@@ -230,3 +230,169 @@ Stack trace:
 #2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
 #3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
 #4 {main}
+[18-Jul-2025 04:27:03 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 04:27:03 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'correo' cannot be null in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:49
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(49): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 04:31:19 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 04:32:01 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 09:23:27 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 09:23:27 America/Tegucigalpa] userModel::getALL -> PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE talleresescolares.ConsultarAbogados does not exist in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:143
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(143): PDOStatement->execute()
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(94): App\Models\userModel::getAll()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(19): App\Controllers\userController->getAll('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 09:31:27 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:14:56 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\userModel::setEmail() in C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php:81
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php on line 81
+[18-Jul-2025 10:19:25 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\userModel::setClave() in C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php:82
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php on line 82
+[18-Jul-2025 10:23:18 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:23:18 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\userModel::getEmail() in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:73
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(83): App\Models\userModel::login()
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 73
+[18-Jul-2025 10:23:19 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:23:19 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\userModel::getEmail() in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:73
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(83): App\Models\userModel::login()
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 73
+[18-Jul-2025 10:23:19 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:23:19 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\userModel::getEmail() in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:73
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(83): App\Models\userModel::login()
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 73
+[18-Jul-2025 10:23:19 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:23:19 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\userModel::getEmail() in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:73
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(83): App\Models\userModel::login()
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 73
+[18-Jul-2025 10:27:24 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:27:24 America/Tegucigalpa] userModel::Login -> PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE talleresescolares.Login does not exist in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:76
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(76): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(83): App\Models\userModel::login()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 10:27:26 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:27:26 America/Tegucigalpa] userModel::Login -> PDOException: SQLSTATE[42000]: Syntax error or access violation: 1305 PROCEDURE talleresescolares.Login does not exist in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:76
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(76): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(83): App\Models\userModel::login()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 10:35:56 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:35:56 America/Tegucigalpa] PHP Warning:  Undefined array key "clave" in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 85
+[18-Jul-2025 10:35:56 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 10:36:08 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:36:08 America/Tegucigalpa] PHP Warning:  Undefined array key "clave" in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 85
+[18-Jul-2025 10:36:08 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 10:39:23 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:39:23 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 10:45:24 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:45:24 America/Tegucigalpa] PHP Warning:  Undefined array key "contraseña" in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 85
+[18-Jul-2025 10:45:24 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 10:48:24 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:48:25 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 10:51:54 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:51:54 America/Tegucigalpa] userModel::Login -> PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'contrasena' in 'field list' in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:76
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(76): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(83): App\Models\userModel::login()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(13): App\Controllers\userController->getLogin('auth/prueba@cor...')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 10:55:19 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:55:19 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 10:59:52 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 10:59:53 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:06:15 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:06:15 America/Tegucigalpa] PHP Warning:  Undefined array key "contraseña" in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 85
+[18-Jul-2025 11:06:15 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:08:06 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:08:06 America/Tegucigalpa] PHP Warning:  Undefined array key "contraseña" in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 85
+[18-Jul-2025 11:08:06 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:08:29 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:08:29 America/Tegucigalpa] PHP Warning:  Undefined array key "contraseña" in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php on line 85
+[18-Jul-2025 11:08:29 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:15:43 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:15:43 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:26:46 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:26:46 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:40:01 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:40:01 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:42:25 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:42:25 America/Tegucigalpa] Clave recibida del procedimiento: {"id_usuario":"1","nombre":"Prueba","rol":"1","correo":"prueba@correo.com","clave":"$2y$10$ZGVdjR4KS.ZEYDe5myywr.RaPrEemOl7vvttWH8Bdyfpy2S.rURpG","IDToken":"0ba97d1349d3caafa50d11d57f20a983b90ac7d92a1a9cf52b9b4a2e7889ae7dc8e5e3ba8d89ee0ff37677420c0af127d4528054093ac948b9dabccedd016461"}
+[18-Jul-2025 11:42:26 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:45:34 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:45:34 America/Tegucigalpa] Clave recibida del procedimiento: {"id_usuario":"1","nombre":"Prueba","rol":"1","correo":"prueba@correo.com","clave":"$2y$10$ZGVdjR4KS.ZEYDe5myywr.RaPrEemOl7vvttWH8Bdyfpy2S.rURpG","IDToken":"0ba97d1349d3caafa50d11d57f20a983b90ac7d92a1a9cf52b9b4a2e7889ae7dc8e5e3ba8d89ee0ff37677420c0af127d4528054093ac948b9dabccedd016461"}
+[18-Jul-2025 11:45:34 America/Tegucigalpa] Contraseña ingresada por el usuario: 12345abc
+[18-Jul-2025 11:45:34 America/Tegucigalpa] La contraseña es incorrecta
+[18-Jul-2025 11:51:22 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:51:22 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'clave' in 'field list' in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:55
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 11:54:35 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:54:35 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tipo_usuario' cannot be null in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:55
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 11:58:17 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 11:58:17 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:55
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 12:11:43 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 12:11:43 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:55
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}
+[18-Jul-2025 16:39:05 America/Tegucigalpa] Conexión exitosa
+[18-Jul-2025 16:39:05 America/Tegucigalpa] userModel::post -> PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php:55
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\models\userModel.php(55): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\controllers\userController.php(52): App\Models\userModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
+#4 {main}

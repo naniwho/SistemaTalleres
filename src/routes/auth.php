@@ -1,17 +1,17 @@
 <?php
-use App\Config\Security;
-echo json_encode(Security::secretKey());
-echo json_encode(Security::createPassword("hola"));
 
-$pass = Security::createPassword("hola");
-if (Security::validatePassword("hola",$pass)){
-    echo json_encode("Contraseña correcta");
+use App\Controllers\userController;
+use App\Config\responseHTTP;
+
+$method = strtolower($_SERVER['REQUEST_METHOD']); // capturamos el método HTTP
+$route = $_GET['route']; // capturamos la ruta
+$params = explode('/', $route); // ejemplo: auth/prueba@correo.com/12345abc
+$data = json_decode(file_get_contents("php://input"), true);
+$headers = getallheaders();
+
+$app = new userController($method, $route, $params, $data, $headers);
+$app->getLogin("auth/{$params[1]}/{$params[2]}/");
+if ($method === 'get' && count($params) === 3 && $params[0] === 'auth') {
+    $app->getLogin('auth');
 } else {
-    echo json_encode("Contraseña inorrecta");
-}
- 
-
-echo (json_encode(Security::createTokenJwt(Security::secretKey(),["hola"])));
-
-use App\DB\connectionDB;
-connectionDB::getConnection();
+    echo json_encode(responseHTTP::status404());}

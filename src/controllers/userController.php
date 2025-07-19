@@ -65,20 +65,20 @@ class userController{
         //print_r($this->params);
         //echo($this->route);
         //echo($endpoint);
-        if($this-> method == 'get' && $endpoint == $this->params[0]){
+        if($this-> method == 'get' && $endpoint == $this->route){
             ///echo "ingresa";
-            $user = strtolower($this->params[1]); //pasamos el email
+            $email = strtolower($this->params[1]); //pasamos el email
             $pass = $this->params[2]; //pasamos la clave
             //algunas validaciones requeridas
-            if(empty($user) || empty($pass)){
+            if(empty($email) || empty($pass)){
                 echo json_encode(responseHTTP::status400('Todos los campos son requeridos, proceda a
                 llenarlos.'));
-            }else if(!filter_var($user, FILTER_VALIDATE_EMAIL)){
+            }else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                 echo json_encode(responseHTTP::status400('El correo debe tener el formato correcto.'));
             }else{
                 //echo "llega";
                 //pasamos los val al modelo que usaremos para hacer la peticion a la BD y llamamos al metodo Login
-                userModel::setEmail($user);
+                userModel::setEmail($email);
                 userModel::setClave($pass);
                 echo json_encode(userModel::Login());
             }
