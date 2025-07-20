@@ -396,3 +396,57 @@ Stack trace:
 #2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(16): App\Controllers\userController->post('user')
 #3 C:\xampp\htdocs\SistemaTalleres\public\index.php(24): require('C:\\xampp\\htdocs...')
 #4 {main}
+[19-Jul-2025 15:38:10 America/Tegucigalpa] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Config\responseHTTP::status400(), 0 passed in C:\xampp\htdocs\SistemaTalleres\public\index.php on line 12 and exactly 1 expected in C:\xampp\htdocs\SistemaTalleres\src\Config\responseHTTP.php:29
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(12): App\Config\responseHTTP::status400()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Config\responseHTTP.php on line 29
+[19-Jul-2025 15:38:13 America/Tegucigalpa] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Config\responseHTTP::status400(), 0 passed in C:\xampp\htdocs\SistemaTalleres\public\index.php on line 12 and exactly 1 expected in C:\xampp\htdocs\SistemaTalleres\src\Config\responseHTTP.php:29
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(12): App\Config\responseHTTP::status400()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Config\responseHTTP.php on line 29
+[20-Jul-2025 12:07:15 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1049] Unknown database 'talleresescolares' in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php(46): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(7): require('C:\\xampp\\htdocs...')
+#3 {main}
+[20-Jul-2025 12:11:42 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1049] Unknown database 'talleresescolares' in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php(47): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(7): require('C:\\xampp\\htdocs...')
+#3 {main}
+[20-Jul-2025 12:11:43 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1049] Unknown database 'talleresescolares' in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php(47): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(7): require('C:\\xampp\\htdocs...')
+#3 {main}
+[20-Jul-2025 12:11:56 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1049] Unknown database 'talleresescolares' in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php(47): App\DB\connectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(7): require('C:\\xampp\\htdocs...')
+#3 {main}
+[20-Jul-2025 12:13:10 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1049] Unknown database 'talleresescolares' in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php(47): App\DB\connectionDB::getConnection()
+#2 {main}
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 38
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 38
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 38
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 38
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 38
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 38
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 41
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 41
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Undefined variable $data in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 41
+[20-Jul-2025 12:17:29 America/Tegucigalpa] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php on line 41
+[20-Jul-2025 12:17:29 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\db\connectionDB.php(24): PDO->__construct('mysql:host=;por...', NULL, Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php(45): App\DB\connectionDB::getConnection()
+#2 {main}

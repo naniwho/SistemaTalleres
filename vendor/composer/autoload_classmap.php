@@ -9,7 +9,6 @@ return array(
     'App\\Config\\Security' => $baseDir . '/src/Config/Security.php',
     'App\\Config\\errorlogs' => $baseDir . '/src/Config/errorlogs.php',
     'App\\Config\\responseHTTP' => $baseDir . '/src/Config/responseHTTP.php',
-    'App\\Models\\userModel' => $baseDir . '/src/Models/userModel.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Dotenv\\Dotenv' => $vendorDir . '/vlucas/phpdotenv/src/Dotenv.php',

@@ -4,7 +4,7 @@ namespace App\DB; //nombre de espacios con la carpeta donde esta ubicado este ar
 use App\Config\responseHTTP;
 use PDO; //usaremos el objeto PDO para interactuar con la BD
 //requerimos la preparacion de este objeto incluyendo este archivo
-require __DIR__.'/dataDB.php'; //__DIR__ estamos en la misma carpeta
+
 
 class connectionDB{
     private static $host = ''; //arreglo de datos (servidor, puerto, etc...)

@@ -5,7 +5,7 @@
     errorlogs::activa_error_logs(); //activamos los errors    
     if(isset($_GET['route'])){
         $url = explode('/',$_GET['route']);
-        $lista = ['auth', 'user']; // lista de rutas permitidas
+        $lista = ['auth', 'user','taller']; // lista de rutas permitidas
         $file =  dirname(__DIR__).'/src/routes/'.$url[0].'.php';
         if(!in_array($url[0], $lista)){
             //echo "La ruta no existe";
