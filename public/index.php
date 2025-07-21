@@ -9,7 +9,7 @@
         $file =  dirname(__DIR__).'/src/routes/'.$url[0].'.php';
         if(!in_array($url[0], $lista)){
             //echo "La ruta no existe";
-            echo json_encode(responseHTTP::status400());
+            echo json_encode(responseHTTP::status400('ruta no valida'));
             error_log("Esto es una prueba de error...");
            //header(‘HTTP/1.1 404 Not Found’);
             exit; //finalizamos la ejecución
