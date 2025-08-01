@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones | Sistema de Talleres</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+         <aside class="sidebar">
+            <div class="sidebar-header">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Talleres Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="talleres_disponibles.html">Talleres Disponibles</a></li>
+                    <li><a href="mis_inscripciones.html">Mis Inscripciones</a></li>
+                    <li><a href="calificaciones.html">Calificaciones</a></li>
+                    <li><a href="asistencia.html">Asistencia</a></li>
+                    <li class="active"><a href="notificaciones_usuario.html">Notificaciones</a></li>
+                    <li><a href="reportes_usuario.html">Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AP</span>
+                    <div class="user-info">
+                        <span class="user-name">Ana Pérez</span>
+                        <span class="user-role">Padre/Tutor</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Bandeja de Entrada</h1>
+                <p>Aquí encontrarás todas las comunicaciones y avisos importantes.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                 <div class="card card-full-width">
+                    <div class="card-header">
+                        <h3>Todas las Notificaciones</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="notification urgent">
+                            <p><strong>Cancelado:</strong> El taller de Arte de hoy ha sido cancelado por mal tiempo.</p>
+                        </div>
+                        <div class="notification warning">
+                            <p><strong>Recordatorio:</strong> El pago de la inscripción para el taller de Música vence en 3 días.</p>
+                        </div>
+                         <div class="notification info">
+                            <p><strong>Nuevo:</strong> Se abrió la inscripción para el Taller de Ajedrez.</p>
+                        </div>
+                        <div class="notification info">
+                            <p><strong>Información:</strong> Las calificaciones del primer período ya están disponibles en la sección "Calificaciones".</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

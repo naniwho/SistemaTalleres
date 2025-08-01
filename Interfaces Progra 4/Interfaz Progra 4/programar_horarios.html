@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programar Horarios | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                 <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Admin Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="admin_dashboard.html">Dashboard</a></li>
+                    <li><a href="gestionar_talleres.html">Gestionar Talleres</a></li>
+                    <li><a href="gestionar_usuarios.html">Gestionar Usuarios</a></li>
+                    <li><a href="gestionar_inscripciones.html">Gestionar Inscripciones</a></li>
+                    <li class="active"><a href="programar_horarios.html">Programar Horarios</a></li>
+                    <li><a href="enviar_notificaciones.html">Enviar Notificaciones</a></li>
+                    <li><a href="generar_reportes.html">Generar Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <div class="user-info">
+                        <span class="user-name">Admin General</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Programar Horarios</h1>
+                <p>Define los días y horas para cada taller.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card card-full-width">
+                    <div class="card-header">
+                        <h3>Asignar Nuevo Horario</h3>
+                    </div>
+                    <div class="card-body">
+                        <form class="login-form">
+                            <div class="input-group">
+                                <label for="taller">Seleccionar Taller</label>
+                                <select id="taller" name="taller" required class="input-group input">
+                                    <option value="">-- Elija un taller --</option>
+                                    <option value="futbol">Taller de Fútbol</option>
+                                    <option value="robotica">Club de Robótica</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="dia">Día de la Semana</label>
+                                <select id="dia" name="dia" required class="input-group input">
+                                    <option value="lunes">Lunes</option>
+                                    <option value="martes">Martes</option>
+                                    <option value="miercoles">Miércoles</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="hora_inicio">Hora de Inicio</label>
+                                <input type="time" id="hora_inicio" name="hora_inicio" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="hora_fin">Hora de Finalización</label>
+                                <input type="time" id="hora_fin" name="hora_fin" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Guardar Horario</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

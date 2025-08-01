@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia | Sistema de Talleres</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+         <aside class="sidebar">
+            <div class="sidebar-header">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Talleres Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="talleres_disponibles.html">Talleres Disponibles</a></li>
+                    <li><a href="mis_inscripciones.html">Mis Inscripciones</a></li>
+                    <li><a href="calificaciones.html">Calificaciones</a></li>
+                    <li class="active"><a href="asistencia.html">Asistencia</a></li>
+                    <li><a href="notificaciones_usuario.html">Notificaciones</a></li>
+                    <li><a href="reportes_usuario.html">Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AP</span>
+                    <div class="user-info">
+                        <span class="user-name">Ana Pérez</span>
+                        <span class="user-role">Padre/Tutor</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Registro de Asistencia</h1>
+                <p>Revisa el historial de asistencia de tus hijos a los talleres.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card card-full-width">
+                    <div class="card-header">
+                        <h3>Historial Reciente</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Taller</th>
+                                        <th>Fecha</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mateo Pérez</td>
+                                        <td>Taller de Fútbol</td>
+                                        <td>2025-07-15</td>
+                                        <td>Presente</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sofía Pérez</td>
+                                        <td>Club de Robótica</td>
+                                        <td>2025-07-16</td>
+                                        <td>Presente</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Mateo Pérez</td>
+                                        <td>Taller de Fútbol</td>
+                                        <td>2025-07-17</td>
+                                        <td>Presente</td>
+                                    </tr>
+                                     <tr>
+                                        <td>Sofía Pérez</td>
+                                        <td>Club de Robótica</td>
+                                        <td>2025-07-23</td>
+                                        <td>Ausente (Justificado)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

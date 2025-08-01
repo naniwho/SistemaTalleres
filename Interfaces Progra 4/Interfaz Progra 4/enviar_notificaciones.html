@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Notificaciones | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                 <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Admin Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="admin_dashboard.html">Dashboard</a></li>
+                    <li><a href="gestionar_talleres.html">Gestionar Talleres</a></li>
+                    <li><a href="gestionar_usuarios.html">Gestionar Usuarios</a></li>
+                    <li><a href="gestionar_inscripciones.html">Gestionar Inscripciones</a></li>
+                    <li><a href="programar_horarios.html">Programar Horarios</a></li>
+                    <li class="active"><a href="enviar_notificaciones.html">Enviar Notificaciones</a></li>
+                    <li><a href="generar_reportes.html">Generar Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <div class="user-info">
+                        <span class="user-name">Admin General</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Enviar Notificaciones</h1>
+                <p>Comunícate con los padres y tutores.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card card-full-width">
+                    <div class="card-header">
+                        <h3>Redactar Notificación</h3>
+                    </div>
+                    <div class="card-body">
+                        <form class="login-form">
+                            <div class="input-group">
+                                <label for="destinatario">Enviar a:</label>
+                                <select id="destinatario" name="destinatario" required class="input-group input">
+                                    <option value="todos">Todos los Usuarios</option>
+                                    <option value="futbol">Inscritos en Taller de Fútbol</option>
+                                    <option value="robotica">Inscritos en Club de Robótica</option>
+                                    <option value="individual">Usuario Específico</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="asunto">Asunto</label>
+                                <input type="text" id="asunto" name="asunto" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 16px; font-family: var(--font-family);"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Enviar Notificación</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

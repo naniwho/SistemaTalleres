@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres Disponibles | Sistema de Talleres</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Talleres Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li class="active"><a href="talleres_disponibles.html">Talleres Disponibles</a></li>
+                    <li><a href="mis_inscripciones.html">Mis Inscripciones</a></li>
+                    <li><a href="calificaciones.html">Calificaciones</a></li>
+                    <li><a href="asistencia.html">Asistencia</a></li>
+                    <li><a href="notificaciones_usuario.html">Notificaciones</a></li>
+                    <li><a href="reportes_usuario.html">Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AP</span>
+                    <div class="user-info">
+                        <span class="user-name">Ana Pérez</span>
+                        <span class="user-role">Padre/Tutor</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Talleres Disponibles</h1>
+                <p>Explora e inscribe a tus hijos en nuestros talleres.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Taller de Fútbol</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Instructor:</strong> Carlos Rojas</p>
+                        <p><strong>Horario:</strong> Martes y Jueves, 16:00 - 17:30</p>
+                        <p><strong>Cupos disponibles:</strong> 2</p>
+                        <p>Fomenta el trabajo en equipo y la disciplina a través del deporte rey.</p>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Inscribir</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Club de Robótica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Instructor:</strong> Laura Campos</p>
+                        <p><strong>Horario:</strong> Miércoles, 15:30 - 17:00</p>
+                        <p><strong>Cupos disponibles:</strong> 3</p>
+                        <p>Despierta la creatividad y el pensamiento lógico construyendo robots.</p>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Inscribir</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Taller de Ajedrez</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Instructor:</strong> Ricardo Juárez</p>
+                        <p><strong>Horario:</strong> Lunes, 15:00 - 16:00</p>
+                        <p><strong>Cupos disponibles:</strong> 8</p>
+                        <p>Desarrolla la estrategia y la concentración con el deporte ciencia.</p>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Inscribir</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

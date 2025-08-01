@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Usuarios | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                 <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Admin Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="admin_dashboard.html">Dashboard</a></li>
+                    <li><a href="gestionar_talleres.html">Gestionar Talleres</a></li>
+                    <li class="active"><a href="gestionar_usuarios.html">Gestionar Usuarios</a></li>
+                    <li><a href="gestionar_inscripciones.html">Gestionar Inscripciones</a></li>
+                    <li><a href="programar_horarios.html">Programar Horarios</a></li>
+                    <li><a href="enviar_notificaciones.html">Enviar Notificaciones</a></li>
+                    <li><a href="generar_reportes.html">Generar Reportes</a></li>
+                </ul>
+            </nav>
+             <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <div class="user-info">
+                        <span class="user-name">Admin General</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Gestionar Usuarios</h1>
+                <p>Administra las cuentas de padres, tutores y estudiantes.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card card-full-width">
+                     <div class="card-header">
+                        <h3>Lista de Usuarios Registrados</h3>
+                    </div>
+                    <div class="card-body">
+                         <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre Completo</th>
+                                        <th>Correo Electrónico</th>
+                                        <th>Rol</th>
+                                        <th>Fecha de Registro</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ana Pérez</td>
+                                        <td>ana.perez@email.com</td>
+                                        <td>Padre/Tutor</td>
+                                        <td>2024-05-10</td>
+                                        <td><button class="btn btn-secondary">Editar</button> <button class="btn btn-secondary">Ver Hijos</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Juan Rodríguez</td>
+                                        <td>juan.r@email.com</td>
+                                        <td>Padre/Tutor</td>
+                                        <td>2024-04-22</td>
+                                        <td><button class="btn btn-secondary">Editar</button> <button class="btn btn-secondary">Ver Hijos</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

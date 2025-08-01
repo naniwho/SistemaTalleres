@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Sistema de Talleres</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .action-buttons a { text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Admin Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="admin_dashboard.html">Dashboard</a></li>
+                    <li><a href="gestionar_talleres.html">Gestionar Talleres</a></li>
+                    <li><a href="gestionar_usuarios.html">Gestionar Usuarios</a></li>
+                    <li><a href="gestionar_inscripciones.html">Gestionar Inscripciones</a></li>
+                    <li><a href="programar_horarios.html">Programar Horarios</a></li>
+                    <li><a href="enviar_notificaciones.html">Enviar Notificaciones</a></li>
+                    <li><a href="generar_reportes.html">Generar Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <div class="user-info">
+                        <span class="user-name">Admin General</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Panel de Administración</h1>
+                <p>Gestiona todos los aspectos del sistema desde aquí.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Estadísticas Clave</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Talleres más populares:</strong> Fútbol, Robótica</p>
+                        <p><strong>Asistencia promedio:</strong> 92%</p>
+                        <p><strong>Total de estudiantes inscritos:</strong> 157</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Acciones Rápidas de Admin</h3>
+                    </div>
+                    <div class="card-body action-buttons">
+                        <a href="gestionar_talleres.html"><button class="btn btn-primary">Agregar Nuevo Taller</button></a>
+                        <a href="gestionar_inscripciones.html"><button class="btn btn-secondary">Inscribir Estudiante</button></a>
+                        <a href="enviar_notificaciones.html"><button class="btn btn-secondary">Enviar Notificación</button></a>
+                    </div>
+                </div>
+
+                <div class="card card-full-width">
+                     <div class="card-header">
+                        <h3>Gestión de Talleres Activos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="event">
+                            <div class="event-details"><p class="event-title">Taller de Fútbol</p><p class="event-meta">Instructor: Carlos Rojas</p></div>
+                            <div class="action-buttons"><button class="btn-secondary btn">Editar</button> <button class="btn-secondary btn">Ver Horario</button></div>
+                        </div>
+                        <div class="event">
+                           <div class="event-details"><p class="event-title">Club de Robótica</p><p class="event-meta">Instructor: Laura Campos</p></div>
+                           <div class="action-buttons"><button class="btn-secondary btn">Editar</button> <button class="btn-secondary btn">Ver Horario</button></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
