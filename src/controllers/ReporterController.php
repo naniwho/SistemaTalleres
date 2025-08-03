@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Config\responseHTTP;
 use App\Config\Security;
 use App\Models\userModel;
-class userController{
+class ReporterController{
     private $method;
     private $route;
     private $params;

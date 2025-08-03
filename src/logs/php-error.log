@@ -481,3 +481,315 @@ Stack trace:
 #1 C:\xampp\htdocs\SistemaTalleres\src\db\dataDB.php(45): App\DB\connectionDB::getConnection()
 #2 {main}
 >>>>>>> 3dc79c4346caca528c95e7ba2b86841d58d4e694
+[02-Aug-2025 00:07:31 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 00:07:47 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 00:08:23 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 00:11:46 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 00:25:50 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 00:44:26 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 01:13:10 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 01:14:03 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 01:16:19 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: PDO::__construct(): Argument #1 ($dsn) must be a valid data source name in C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php(24): PDO->__construct('', '', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(24): App\DB\ConnectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#3 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#4 C:\xampp\htdocs\SistemaTalleres\public\index.php(28): require('C:\\xampp\\htdocs...')
+#5 {main}
+[02-Aug-2025 01:17:31 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: PDO::__construct(): Argument #1 ($dsn) must be a valid data source name in C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php(24): PDO->__construct('', '', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(24): App\DB\ConnectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#3 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#4 C:\xampp\htdocs\SistemaTalleres\public\index.php(28): require('C:\\xampp\\htdocs...')
+#5 {main}
+[02-Aug-2025 01:19:29 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: PDO::__construct(): Argument #1 ($dsn) must be a valid data source name in C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php(24): PDO->__construct('', '', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(24): App\DB\ConnectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#3 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#4 C:\xampp\htdocs\SistemaTalleres\public\index.php(28): require('C:\\xampp\\htdocs...')
+#5 {main}
+[02-Aug-2025 01:19:55 America/Tegucigalpa] Error en la conexión a la BD! ERROR: PDOException: PDO::__construct(): Argument #1 ($dsn) must be a valid data source name in C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\DB\ConnectionDB.php(24): PDO->__construct('', '', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(24): App\DB\ConnectionDB::getConnection()
+#2 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#3 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#4 C:\xampp\htdocs\SistemaTalleres\public\index.php(28): require('C:\\xampp\\htdocs...')
+#5 {main}
+[02-Aug-2025 01:24:14 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 01:24:14 America/Tegucigalpa] UserModel::post -> PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php:26
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(26): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#4 {main}
+[02-Aug-2025 01:29:56 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 01:29:56 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"Nani",":p_tipo_usuario":"Administrador",":p_correo":"nani@example.com",":p_contrase\u00f1a":"$2y$10$1MitPMdX6nlfsO2vzD7O5OG4yI9QPu.3W\/qoX0QWJQ7vooppS.MP.",":p_fecha_registro":"2025-08-02"}
+[02-Aug-2025 01:29:56 America/Tegucigalpa] UserModel::post -> PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php:34
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(34): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#4 {main}
+[02-Aug-2025 01:30:14 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 01:30:15 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"Nani",":p_tipo_usuario":"Administrador",":p_correo":"nani@example.com",":p_contrase\u00f1a":"$2y$10$T6BaumaqITl0vv12CJdIt.0iPLbWAOwNZVfh7Q83GD9laxOKnlWhu",":p_fecha_registro":"2025-08-02"}
+[02-Aug-2025 01:30:15 America/Tegucigalpa] UserModel::post -> PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php:34
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(34): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#4 {main}
+[02-Aug-2025 01:33:04 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 01:33:04 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"Nani",":p_tipo_usuario":"Administrador",":p_correo":"nani@example.com",":p_contrase\u00f1a":"$2y$10$ojBBC.JgXghhUaOoUBN5B.OMOwlPcWzHLkcEnSLpR.b.v6Ojy4bf6",":p_fecha_registro":"2025-08-02"}
+[02-Aug-2025 01:33:04 America/Tegucigalpa] UserModel::post -> PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php:38
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(38): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#4 {main}
+[02-Aug-2025 01:39:07 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 01:39:08 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"Nani",":p_tipo_usuario":"Administrador",":p_correo":"nani@example.com",":p_password":"$2y$10$aMhFhJ\/gAdaGO30owcjXae2kamFui1.gd1zErFnsqiFqdjQC0zOhm",":p_fecha_registro":"2025-08-02"}
+[02-Aug-2025 02:01:06 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:03:35 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:03:42 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:04:06 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:05:41 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:08:40 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\Config\db" not found in C:\xampp\htdocs\SistemaTalleres\src\Models\AuthModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Controllers\AuthController.php(14): App\Models\AuthModel->__construct()
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(15): App\Controllers\AuthController->__construct()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Models\AuthModel.php on line 10
+[02-Aug-2025 02:12:16 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\Config\db" not found in C:\xampp\htdocs\SistemaTalleres\src\Models\AuthModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Controllers\AuthController.php(14): App\Models\AuthModel->__construct()
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(15): App\Controllers\AuthController->__construct()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Models\AuthModel.php on line 10
+[02-Aug-2025 02:16:49 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Class "App\Models\ConnectionDB" not found in C:\xampp\htdocs\SistemaTalleres\src\Models\AuthModel.php:10
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Controllers\AuthController.php(14): App\Models\AuthModel->__construct()
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\auth.php(15): App\Controllers\AuthController->__construct()
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Models\AuthModel.php on line 10
+[02-Aug-2025 02:20:11 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 02:24:27 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:25:01 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:27:50 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:32:21 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:39:07 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:39:29 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:39:39 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:42:00 America/Tegucigalpa] Esto es una prueba de error...
+[02-Aug-2025 02:55:09 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 02:55:09 America/Tegucigalpa] Método: post
+[02-Aug-2025 02:55:09 America/Tegucigalpa] Ruta: auth/login
+[02-Aug-2025 02:55:09 America/Tegucigalpa] Data: {"email":"nani@example.com","clave":"clave123"}
+[02-Aug-2025 02:58:22 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 02:58:22 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 03:11:57 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 03:11:57 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 03:35:36 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 03:40:10 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 03:40:10 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"Nani",":p_tipo_usuario":"Administrador",":p_correo":"nani@example.com",":p_password":"$2y$10$WZnvQ7mtBdwwh..\/YlGRPOhomTgW96.EMW49iE88L4pPDFQtJfFZe",":p_fecha_registro":"2025-08-02"}
+[02-Aug-2025 03:40:10 America/Tegucigalpa] UserModel::post -> PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'nani@example.com' for key 'correo' in C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php:38
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Models\UserModel.php(38): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(46): App\Models\UserModel::post()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(15): App\Controllers\UserController->post('user')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#4 {main}
+[02-Aug-2025 04:37:33 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 04:37:33 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"Juan P\u00e9rez",":p_tipo_usuario":"Estudiante",":p_correo":"juan@example.com",":p_password":"$2y$10$JvN\/13w2a5EOSHk\/ycSQj.ZNCvP.ILOXmA\/YT3Dpf2fmdnXDVaSHW",":p_fecha_registro":"2025-08-02"}
+[02-Aug-2025 04:38:04 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\UserController::getAll() in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 24
+[02-Aug-2025 04:39:18 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\UserController::getAll() in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 24
+[02-Aug-2025 04:39:44 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\UserController::getAll() in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:24
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 24
+[02-Aug-2025 04:43:47 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 04:44:11 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 04:45:07 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 04:45:56 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Models\UserModel::get() in C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php:57
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(24): App\Controllers\UserController->get('user')
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php on line 57
+[02-Aug-2025 04:49:34 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 04:55:19 America/Tegucigalpa] PHP Warning:  Undefined variable $userController in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 32
+[02-Aug-2025 04:55:19 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to a member function put() on null in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:32
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 32
+[02-Aug-2025 04:59:24 America/Tegucigalpa] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Controllers\UserController::__construct(), 0 passed in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 12 and exactly 5 expected in C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php:14
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(12): App\Controllers\UserController->__construct()
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php on line 14
+[02-Aug-2025 22:30:10 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 22:33:02 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 23:11:18 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 23:13:30 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 23:14:35 America/Tegucigalpa] Conexión exitosa
+[02-Aug-2025 23:14:35 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"Natali",":p_tipo_usuario":"admin",":p_correo":"natali@talleres.com",":p_password":"$2y$10$XEOt\/I0v5E9XktfUDCK8ruluHaw6onzrVGhmEX.80Lx\/AQSUcIq5u",":p_fecha_registro":"2025-08-02"}
+[02-Aug-2025 23:18:35 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 00:24:13 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 00:40:02 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 00:40:16 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 00:42:58 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 00:46:03 America/Tegucigalpa] Esto es una prueba de error...
+[03-Aug-2025 00:50:16 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 00:59:33 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:07:47 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:10:59 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:15:14 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:18:30 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:28:13 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 01:32:09 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 01:33:45 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:33:45 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 01:37:17 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:37:17 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 01:38:41 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 01:38:41 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 01:46:36 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 01:51:35 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 01:54:24 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 01:55:19 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 01:59:59 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:03:51 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:05:27 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:09:04 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:10:57 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:16:24 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:16:24 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:16:34 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:16:34 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:19:24 America/Tegucigalpa] MÉTODO DETECTADO: post
+[03-Aug-2025 02:19:24 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:19:24 America/Tegucigalpa] Valores que se enviarán: {":p_nombre":"jose",":p_tipo_usuario":"admin",":p_correo":"jose@talleres.com",":p_password":"$2y$10$EPRrzhIkSJTFMFe5UNmCcucS186VhhwD5pNvxSsp6SKoWkumOsmWy",":p_fecha_registro":"2025-08-03"}
+[03-Aug-2025 02:23:42 America/Tegucigalpa] MÉTODO DETECTADO: post
+[03-Aug-2025 02:23:42 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:24:01 America/Tegucigalpa] MÉTODO DETECTADO: post
+[03-Aug-2025 02:24:01 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:26:17 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:26:17 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:29:41 America/Tegucigalpa] MÉTODO DETECTADO: put
+[03-Aug-2025 02:29:41 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:31:11 America/Tegucigalpa] MÉTODO DETECTADO: delete
+[03-Aug-2025 02:31:11 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:32:12 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:34:50 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:35:35 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:36:05 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 02:36:58 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:36:58 America/Tegucigalpa] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\UserController::getOne() in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php:22
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\public\index.php(31): require()
+#1 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\routes\user.php on line 22
+[03-Aug-2025 02:40:41 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:42:13 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:45:23 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:46:11 America/Tegucigalpa] PHP Parse error:  syntax error, unexpected identifier "ob_clean" in C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php on line 134
+[03-Aug-2025 02:46:24 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:49:38 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:52:56 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:53:39 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:56:33 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 02:58:44 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:04:25 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:08:43 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:11:47 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:15:44 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:18:29 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:22:30 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:23:08 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:39:42 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:48:12 America/Tegucigalpa] MÉTODO DETECTADO: get
+[03-Aug-2025 03:49:52 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 03:51:15 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 03:58:11 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 03:58:17 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:05:12 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:07:20 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:11:11 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:19:09 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:23:43 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:29:35 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:30:48 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:35:40 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:39:51 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:40:42 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 04:41:16 America/Tegucigalpa] Conexión exitosa
+[03-Aug-2025 05:02:47 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:03:21 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:04:41 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:07:37 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:08:41 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:09:03 America/Tegucigalpa] PHP Fatal error:  Uncaught TypeError: App\Config\Security::validateTokenJwt(): Argument #1 ($token) must be of type array, string given, called in C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php on line 58 and defined in C:\xampp\htdocs\SistemaTalleres\src\Config\Security.php:62
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Controllers\UserController.php(58): App\Config\Security::validateTokenJwt('Bearer eyJ0eXAi...')
+#1 C:\xampp\htdocs\SistemaTalleres\src\routes\user.php(19): App\Controllers\UserController->get('user')
+#2 C:\xampp\htdocs\SistemaTalleres\public\index.php(27): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Config\Security.php on line 62
+[03-Aug-2025 05:47:22 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:48:13 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:51:30 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:52:53 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:53:13 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:56:24 America/Tegucigalpa] PHP Fatal error:  Uncaught TypeError: App\Controllers\TallerController::__construct(): Argument #4 ($data) must be of type array, null given, called in C:\xampp\htdocs\SistemaTalleres\src\routes\taller.php on line 14 and defined in C:\xampp\htdocs\SistemaTalleres\src\Controllers\TallerController.php:21
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\taller.php(14): App\Controllers\TallerController->__construct('get', 'taller/1', Array, NULL, Array)
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(27): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Controllers\TallerController.php on line 21
+[03-Aug-2025 05:57:12 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 05:57:12 America/Tegucigalpa] tallerModel::update -> PDOException: SQLSTATE[42000]: Syntax error or access violation: 1318 Incorrect number of arguments for PROCEDURE talleresescolares.ActualizarTaller; expected 3, got 5 in C:\xampp\htdocs\SistemaTalleres\src\Models\TallerModel.php:101
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\Models\TallerModel.php(101): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\SistemaTalleres\src\Controllers\TallerController.php(115): App\Models\TallerModel::update()
+#2 C:\xampp\htdocs\SistemaTalleres\src\routes\taller.php(28): App\Controllers\TallerController->put('taller')
+#3 C:\xampp\htdocs\SistemaTalleres\public\index.php(27): require('C:\\xampp\\htdocs...')
+#4 {main}
+[03-Aug-2025 06:07:06 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 06:08:19 America/Tegucigalpa] Conexión exitosa a la BD
+[03-Aug-2025 06:30:18 America/Tegucigalpa] Ruta no válida: test.php
+[03-Aug-2025 06:30:54 America/Tegucigalpa] Ruta no válida: test.php
+[03-Aug-2025 06:56:35 America/Tegucigalpa] PHP Fatal error:  Uncaught TypeError: App\Controllers\TallerController::__construct(): Argument #4 ($data) must be of type array, null given, called in C:\xampp\htdocs\SistemaTalleres\src\routes\taller.php on line 14 and defined in C:\xampp\htdocs\SistemaTalleres\src\Controllers\TallerController.php:21
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\taller.php(14): App\Controllers\TallerController->__construct('get', 'taller/1', Array, NULL, Array)
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(27): require('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Controllers\TallerController.php on line 21
+[03-Aug-2025 07:22:09 America/Tegucigalpa] PHP Fatal error:  Uncaught TypeError: App\Controllers\TallerController::__construct(): Argument #4 ($data) must be of type array, null given, called in C:\xampp\htdocs\SistemaTalleres\src\routes\taller.php on line 14 and defined in C:\xampp\htdocs\SistemaTalleres\src\Controllers\TallerController.php:21
+Stack trace:
+#0 C:\xampp\htdocs\SistemaTalleres\src\routes\taller.php(14): App\Controllers\TallerController->__construct('get', 'taller/1', Array, NULL, Array)
+#1 C:\xampp\htdocs\SistemaTalleres\public\index.php(28): include_once('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\SistemaTalleres\src\Controllers\TallerController.php on line 21

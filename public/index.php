@@ -1,32 +1,39 @@
 <?php
+    require dirname(__DIR__).'\vendor\autoload.php';
     use App\Config\errorlogs;
     use App\Config\responseHTTP;
-    require dirname(__DIR__).'\vendor\autoload.php';
-    errorlogs::activa_error_logs(); //activamos los errors    
-    if(isset($_GET['route'])){
-        $url = explode('/',$_GET['route']);
-        $lista = ['auth', 'user','taller']; // lista de rutas permitidas
-        $file =  dirname(__DIR__).'/src/routes/'.$url[0].'.php';
-        if(!in_array($url[0], $lista)){
-            //echo "La ruta no existe";
-            echo json_encode(responseHTTP::status400('ruta no valida'));
-            error_log("Esto es una prueba de error...");
-           //header(‘HTTP/1.1 404 Not Found’);
-            exit; //finalizamos la ejecución
-        }  
-        
-        //validamos que el archivo exista y que es legible
-        if(!file_exists($file) || !is_readable($file)){
-            //echo "El archivo no existe o no es legible";
-            echo json_encode(responseHTTP::status200('El archivo no existe o no es legible!'));
-            
-        }else{
-            require $file;
-            exit;
-        }
+    use App\DB\ConnectionDB;
+    errorlogs::activa_error_logs(); //permite activar los errores
+  
+    if (isset($_GET['route']) && !empty(trim($_GET['route']))) {
+    $url = explode('/', trim($_GET['route']));
+    $lista = ['auth', 'user', 'taller', 'inscripcion', 'asistencia','calificacion', 
+              'notificacion', 'horario', 'dashboard', 'report'];
 
-    }else{
-        echo "no existe la variable route";
+    $modulo = $url[0];
+
+    if (!in_array($modulo, $lista)) {
+        echo json_encode(responseHTTP::status400('Ruta no válida'));
+        error_log("Ruta no válida: $modulo");
+        exit;
     }
 
-?>
+    $file = dirname(__DIR__).'/src/routes/'.$modulo.'.php';
+    if (!file_exists($file) || !is_readable($file)) {
+        echo json_encode(responseHTTP::status404('El archivo no existe o no es legible!'));
+        http_response_code(404);
+        exit;
+    } else {
+        ob_start();
+        include_once $file;
+        ob_end_clean();
+        exit;
+
+    }
+
+} else {
+    header('Content-Type: application/json');
+    echo json_encode(responseHTTP::status400('No se ha proporcionado la variable route o está vacía'));
+    http_response_code(400);
+    exit;
+}

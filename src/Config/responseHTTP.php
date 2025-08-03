@@ -11,11 +11,13 @@ class responseHTTP{
 
     //creamos nuestro primer codigo de estado http
 
-    final public static function status200($res){
-        http_response_code(200); //funcion de php que permite cambiar el codigo de estado http
-        self::$mensaje['status'] = 'OK';
-        self::$mensaje['message'] = $res; //la variable res es el mensaje/respuesta que proviene del usuario
-        return self::$mensaje;
+    final public static function status200($mensaje, $data = "") {
+        http_response_code(200);
+        return [
+            'status' => 'OK',
+            'message' => $mensaje,
+            'data' => $data
+        ];
     }
 
     final public static function status201(){

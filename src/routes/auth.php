@@ -1,17 +1,26 @@
 <?php
-
-use App\Controllers\userController;
+use App\Controllers\AuthController;
 use App\Config\responseHTTP;
 
-$method = strtolower($_SERVER['REQUEST_METHOD']); // capturamos el método HTTP
-$route = $_GET['route']; // capturamos la ruta
-$params = explode('/', $route); // ejemplo: auth/prueba@correo.com/12345abc
-$data = json_decode(file_get_contents("php://input"), true);
-$headers = getallheaders();
+require '../vendor/autoload.php';
 
-$app = new userController($method, $route, $params, $data, $headers);
-$app->getLogin("auth/{$params[1]}/{$params[2]}/");
-if ($method === 'get' && count($params) === 3 && $params[0] === 'auth') {
-    $app->getLogin('auth');
+$method = strtolower($_SERVER['REQUEST_METHOD']);
+$headers = getallheaders();
+$route = $_GET['route'] ?? '';
+$params = explode('/', $route);
+
+$authController = new AuthController();
+
+if ($params[0] === 'auth' && $method === 'post') {
+    // Asumiendo que envías login con POST y JSON en el body
+    $data = json_decode(file_get_contents("php://input"), true);
+    if (!isset($data['correo']) || !isset($data['contraseña'])) {
+        echo json_encode(responseHTTP::status400('Faltan campos.'));
+        exit;
+    }
+    echo json_encode($authController->login($data));
+    exit;
 } else {
-    echo json_encode(responseHTTP::status404());}
+    echo json_encode(responseHTTP::status400('Ruta no válida'));
+    exit;
+}

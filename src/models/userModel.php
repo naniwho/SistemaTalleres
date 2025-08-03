@@ -1,171 +1,172 @@
 <?php
 namespace App\Models;
 
-use App\DB\connectionDB;
-use App\DB\sql;
+use App\DB\ConnectionDB;
 use App\Config\responseHTTP;
-use App\Config\Security;
 
-class userModel extends connectionDB {
+class UserModel extends ConnectionDB {
     private static $nombre;
-    private static $correo;
     private static $tipo_usuario;
+    private static $correo;
     private static $clave;
     private static $fecha;
-    private static $id_usuario;
 
     public function __construct(array $data) {
-        self::$nombre = $data['nombre'] ?? null;
-        self::$correo = $data['correo'] ?? null;
-        self::$tipo_usuario = $data['tipo_usuario'] ?? null;
-        self::$clave = $data['clave'] ?? null;
-        self::$fecha = $data['fecha_registro'] ?? date('Y-m-d');
-        self::$id_usuario = $data['id_usuario'] ?? null;
+        self::$nombre        = $data['nombre'] ?? null;
+        self::$tipo_usuario  = $data['tipo_usuario'] ?? null;
+        self::$correo        = $data['correo'] ?? null;
+        self::$clave         = $data['clave'] ?? null;
+        self::$fecha         = date('Y-m-d');
     }
 
-    // GETTERS
-    public static function getNombre() { return self::$nombre; }
-    public static function getCorreo() { return self::$correo; }
-    public static function getTipoUsuario() { return self::$tipo_usuario; }
-    public static function getClave() { return self::$clave; }
-    public static function getFecha() { return self::$fecha; }
-    public static function getIdUsuario() { return self::$id_usuario; }
-    public static function getEmail() {return self::$correo;}
-
-
-
-    // SETTERS
-    public static function setEmail($email) {self::$correo = $email;}
-    public static function setTipoUsuario($tipo) {self::$tipo_usuario = $tipo;}
-    public static function setClave($clave) {self::$clave = $clave;}
-    public static function setFecha($fecha) {self::$fecha = $fecha;}
-    public static function setIdUsuario($id) {self::$id_usuario = $id;}
-
-    // Registrar usuario
-    final public static function post() {
+    public static function post() {
         try {
             $con = self::getConnection();
-            $query = "CALL InsertarUsuario(:p_nombre, :p_tipo_usuario, :p_correo, :p_contraseña, :p_fecha_registro)";
+
+            // Verificar si el correo ya existe y está activo
+            $check = $con->prepare("SELECT COUNT(*) FROM usuario WHERE correo = :correo AND activo = 1");
+            $check->bindParam(':correo', self::$correo);
+            $check->execute();
+            $existe = $check->fetchColumn();
+
+            if ($existe > 0) {
+                return \App\Config\responseHTTP::status400('El correo ya está registrado y activo.');
+            }
+
+            // Registro de nuevo usuario
+            $query = "CALL InsertarUsuario(:p_nombre, :p_tipo_usuario, :p_correo, :p_password, :p_fecha_registro)";
             $stmt = $con->prepare($query);
-            $stmt->execute([
-                ':p_nombre' => self::getNombre(),
-                ':p_tipo_usuario' => self::getTipoUsuario(),
-                ':p_correo' => self::getCorreo(),
-                ':p_contraseña' => password_hash(self::getClave(), PASSWORD_DEFAULT),
-                ':p_fecha_registro' => self::getFecha()
-             ]);
 
+            $valores = [
+                ':p_nombre'         => self::$nombre,
+                ':p_tipo_usuario'   => self::$tipo_usuario,
+                ':p_correo'         => self::$correo,
+                ':p_password'       => password_hash(self::$clave, PASSWORD_DEFAULT),
+                ':p_fecha_registro' => self::$fecha
+            ];
 
-            if ($stmt->rowCount() > 0) {
-                return responseHTTP::status200('Usuario registrado correctamente.');
-            } else {
-                return responseHTTP::status500('Error al registrar el usuario.');
-            }
-        } catch (\PDOException $e) {
-            error_log('userModel::post -> ' . $e);
-            die(json_encode(responseHTTP::status500()));
-        }
-    }
-
-    final public static function login(){
-       // echo "llegamos al model";
-        try {
-            $con = self::getConnection(); //abrimos conexion
-            $query = "CALL Login(:email)"; //hacemos la consulta para validar la info
-            $stmt = $con->prepare($query); //preparamos query
-            $stmt->execute([ //pasamos los parametros
-                        ':email' => self::getEmail()
-                    ]);
-                    
-            if($stmt->rowCount() == 0){ //contamos los registros retornados
-                return responseHTTP::status400('Usuario o Contraseña incorrectas!!!');
-            }else{ //si vienen datos
-                
-                foreach ($stmt as $val) {
-                     //validamos que la contraseña que se ingreso sea igual al hash que tenemos en la BD   
-                     error_log("Clave recibida del procedimiento: " . json_encode($val));
-                    error_log("Contraseña ingresada por el usuario: " . self::getClave());
-
-                     if(Security::validatePassword(self::getClave(), $val['clave'])){
-                        //si las claves son igual entonces construyo el Payload de mi JWT  
-                        $payload =[
-                            'IDToken' => $val['IDToken']
-                        ];
-                        //creo el token 
-                        $token = Security::createTokenJwt(Security::secretKey(),$payload);
-                        //datos que le mostraremos a el usuario
-                        $data = [
-                            'nombre' => $val['nombre'],
-                            'rol' => $val['rol'],
-                            'token' => $token,
-                            'access' => 1,
-                        ];
-                        
-                        return($data);
-                        //retorno la data
-                        
-                     }else{
-                        return responseHTTP::status400('Usuario o Contraseña incorrectas1!!!');
-                     }
-                }
-            }
-        } catch (\PDOException $e) {
-            error_log("userModel::Login -> ".$e);
-            die(json_encode(responseHTTP::status500()));
-        }
-    }
-
-    // Obtener todos los usuarios
-    final public static function getAll() {
-        try {
-            $con = self::getConnection();
-            $stmt = $con->prepare("CALL ConsultarUsuarios()");
-            $stmt->execute();
-            $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-            return $res;
-        } catch (\PDOException $e) {
-            error_log("userModel::getAll -> " . $e);
-            die(json_encode(responseHTTP::status500()));
-        }
-    }
-
-    // Eliminar usuario
-    final public static function delete() {
-        try {
-            $con = self::getConnection();
-            $stmt = $con->prepare("CALL EliminarUsuario(:id_usuario)");
-            $stmt->execute([':id_usuario' => self::getIdUsuario()]);
+            $stmt->execute($valores);
 
             if ($stmt->rowCount() > 0) {
-                return responseHTTP::status200('Usuario eliminado correctamente.');
+                return \App\Config\responseHTTP::status200('Usuario registrado correctamente.');
             } else {
-                return responseHTTP::status500('No se eliminó el usuario.');
+                return \App\Config\responseHTTP::status500('Error al registrar el usuario.');
             }
+
         } catch (\PDOException $e) {
-            error_log("userModel::delete -> " . $e);
-            die(json_encode(responseHTTP::status500()));
+            error_log('UserModel::post -> ' . $e);
+            return \App\Config\responseHTTP::status500('Error específico: ' . $e->getMessage());
         }
     }
 
-    // Actualizar nombre y correo del usuario
-    final public static function update() {
+
+    public static function get() {
         try {
             $con = self::getConnection();
-            $stmt = $con->prepare("CALL ActualizarUsuario(:id_usuario, :nombre, :correo)");
-            $stmt->execute([
-                ':id_usuario' => self::getIdUsuario(),
-                ':nombre' => self::getNombre(),
-                ':correo' => self::getCorreo()
-            ]);
+            $stmt = $con->query("SELECT id_usuario, nombre, tipo_usuario, correo, fecha_registro FROM usuario WHERE activo = 1");
+            $usuarios = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+            return responseHTTP::status200('Usuarios obtenidos correctamente.', $usuarios);
+        } catch (\PDOException $e) {
+            error_log('UserModel::get -> ' . $e);
+            return responseHTTP::status500('Error al obtener los usuarios.');
+        }
+    }
+
+   public static function update($id, $data) {
+        try {
+            $con = self::getConnection();
+
+            $campos = [];
+            $valores = [':id' => $id];
+
+            if (!empty($data['nombre'])) {
+                $campos[] = "nombre = :nombre";
+                $valores[':nombre'] = $data['nombre'];
+            }
+
+            if (!empty($data['correo'])) {
+                $campos[] = "correo = :correo";
+                $valores[':correo'] = $data['correo'];
+            }
+
+            if (empty($campos)) {
+                return responseHTTP::status400('Nada que actualizar.');
+            }
+
+            $sql = "UPDATE usuario SET " . implode(', ', $campos) . " WHERE id_usuario = :id";
+            $stmt = $con->prepare($sql);
+            $stmt->execute($valores);
 
             if ($stmt->rowCount() > 0) {
-                return responseHTTP::status200('Usuario actualizado correctamente.');
+                return [
+                'status' => 'OK',
+                'message' => 'Usuario actualizado correctamente.',
+                'data' => []
+            ];
             } else {
-                return responseHTTP::status500('No se actualizó ningún dato.');
+                return [
+                'status' => 'ERROR',
+                'message' => 'No se hicieron cambios.',
+                'data' => []
+            ];
+
+            }
+
+        } catch (\PDOException $e) {
+            error_log('UserModel::update -> ' . $e);
+            return responseHTTP::status500('Error al actualizar el usuario.');
+        }
+    }
+
+    public static function delete($id) {
+        try {
+            $con = self::getConnection();
+            $stmt = $con->prepare("UPDATE usuario SET activo = 0 WHERE id_usuario = :id");
+            $stmt->execute([':id' => $id]);
+
+            if ($stmt->rowCount() > 0) {
+                return \App\Config\responseHTTP::status200('Usuario eliminado correctamente.');
+            } else {
+                return \App\Config\responseHTTP::status400('No se eliminó ningún usuario.');
+            }
+
+        } catch (\PDOException $e) {
+            error_log('UserModel::delete -> ' . $e);
+            return \App\Config\responseHTTP::status500('Error interno al eliminar el usuario.');
+        }
+    }
+
+    public static function getOne($id) {
+        try {
+            $con = self::getConnection();
+            $stmt = $con->prepare("SELECT id_usuario, nombre, tipo_usuario, correo, fecha_registro FROM usuario WHERE id_usuario = :id AND activo = 1");
+            $stmt->execute([':id' => $id]);
+            $usuario = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+            // Registro en log
+            error_log('FETCH getOne usuario: ' . json_encode($usuario));
+
+            if ($usuario) {
+                return [
+                    'status' => 'OK',
+                    'message' => 'Usuario encontrado (prueba real).',
+                    'data' => $usuario
+                ];
+            } else {
+                return [
+                    'status' => 'ERROR',
+                    'message' => 'Usuario no encontrado.',
+                    'data' => []
+                ];
             }
         } catch (\PDOException $e) {
-            error_log("userModel::update -> " . $e);
-            die(json_encode(responseHTTP::status500()));
+            error_log('UserModel::getOne -> ' . $e);
+            return [
+                'status' => 'ERROR',
+                'message' => 'Error al obtener el usuario.',
+                'data' => []
+            ];
         }
     }
 }

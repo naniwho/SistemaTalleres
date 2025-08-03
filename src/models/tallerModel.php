@@ -1,10 +1,10 @@
 <?php
 namespace App\Models;
 
-use App\DB\connectionDB;
+use App\DB\ConnectionDB;
 use App\Config\responseHTTP;
 
-class tallerModel extends connectionDB {
+class TallerModel extends ConnectionDB {
     private static $id_taller;
     private static $id_instructor;
     private static $nombre;
@@ -83,12 +83,29 @@ class tallerModel extends connectionDB {
             $con = self::getConnection();
             $stmt = $con->prepare("CALL ConsultarTallerPorID(:p_id_taller)");
             $stmt->execute([':p_id_taller' => self::getIdTaller()]);
-            return $stmt->fetch(\PDO::FETCH_ASSOC);
+            $taller = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+            if ($taller) {
+                return [
+                    'status' => 'OK',
+                    'message' => 'Taller encontrado',
+                    'data' => $taller
+                ];
+            } else {
+                return [
+                    'status' => 'ERROR',
+                    'message' => 'Taller no encontrado',
+                    'data' => []
+                ];
+            }
         } catch (\PDOException $e) {
-            error_log("tallerModel::getById -> " . $e);
-            die(json_encode(responseHTTP::status500()));
+            error_log("TallerModel::getById -> " . $e);
+            error_log("RESPUESTA getById: " . json_encode($taller));
+
+            return \App\Config\responseHTTP::status500('Error al obtener el taller por ID.');
         }
     }
+
 
     /**
      * Actualizar un taller (para el botón "Editar")

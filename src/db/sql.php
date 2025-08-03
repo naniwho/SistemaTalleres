@@ -3,7 +3,7 @@
 namespace App\DB;
 use App\Config\responseHTTP;
 
-class sql extends connectionDB{
+class sql extends ConnectionDB{
 
     //construimos un metodo que me permitara verificar si existe un registro en nuestra base de datos bajpo ciertos parametros y condiciones
    final public static function verificarRegistro($sql, $condicion, $params){
