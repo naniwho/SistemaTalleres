@@ -4,31 +4,40 @@ namespace App\DB;
 
 use App\Config\responseHTTP;
 use PDO;
-use Dotenv\Dotenv; 
+use Dotenv\Dotenv;
+
 class ConnectionDB {
+    private static $conexion = null;
 
-    private static ?PDO $conexion = null;
+    final public static function getConnection() {
+        if (self::$conexion === null) {
+            try {
+                // Cargar .env
+                $dotenv = Dotenv::createImmutable(dirname(__DIR__, 2));
+                $dotenv->load();
 
-  final public static function getConnection(): ?PDO {
-    if (self::$conexion === null) {
+                $host     = $_ENV['IP'] ?? '127.0.0.1';
+                $port     = $_ENV['PORT'] ?? '3306';
+                $db       = $_ENV['DB'] ?? 'talleresescolares';
+                $user     = $_ENV['USER'] ?? 'root';
+                $password = $_ENV['PASSWORD'] ?? '';
 
-        $host = $_ENV['DB_HOST'] ?? '127.0.0.1';
-        $port = $_ENV['DB_PORT'] ?? '3306';
-        $db = $_ENV['DB_DATABASE'] ?? 'talleres_escolares';
-        $user = $_ENV['DB_USER'] ?? 'root';
-        $password = $_ENV['DB_PASSWORD'] ?? '';
+                $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8";
 
-        $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8";
+                $opt = [
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+                ];
 
-        $opt = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-        ];
+                self::$conexion = new PDO($dsn, $user, $password, $opt);
+                error_log("Conexión exitosa a la BD");
 
-        self::$conexion = new PDO($dsn, $user, $password, $opt);
+            } catch (\PDOException $e) {
+                error_log("Error en la conexión a la BD: " . $e->getMessage());
+                die(json_encode(responseHTTP::status500()));
+            }
+        }
 
-        error_log("Conexión exitosa a la BD.");
+        return self::$conexion;
     }
-    return self::$conexion;
-}
 }
