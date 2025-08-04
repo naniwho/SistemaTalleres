@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Config\responseHTTP;
 use App\Config\Security;
-use App\Models\UserModel;
+use App\Models\userModel;
 class ReporterController{
     private $method;
     private $route;
