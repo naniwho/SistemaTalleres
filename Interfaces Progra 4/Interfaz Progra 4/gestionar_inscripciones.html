@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Inscripciones | Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+             <div class="sidebar-header">
+                 <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Admin Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="admin_dashboard.html">Dashboard</a></li>
+                    <li><a href="gestionar_talleres.html">Gestionar Talleres</a></li>
+                    <li><a href="gestionar_usuarios.html">Gestionar Usuarios</a></li>
+                    <li class="active"><a href="gestionar_inscripciones.html">Gestionar Inscripciones</a></li>
+                    <li><a href="programar_horarios.html">Programar Horarios</a></li>
+                    <li><a href="enviar_notificaciones.html">Enviar Notificaciones</a></li>
+                    <li><a href="generar_reportes.html">Generar Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AD</span>
+                    <div class="user-info">
+                        <span class="user-name">Admin General</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Gestionar Inscripciones</h1>
+                <p>Visualiza y aprueba las inscripciones de los estudiantes a los talleres.</p>
+            </header>
+            <section class="dashboard-grid">
+                <div class="card card-full-width">
+                     <div class="card-header">
+                        <h3>Últimas Inscripciones</h3>
+                    </div>
+                    <div class="card-body">
+                         <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Taller</th>
+                                        <th>Tutor</th>
+                                        <th>Fecha de Inscripción</th>
+                                        <th>Estado de Pago</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mateo Pérez</td>
+                                        <td>Taller de Fútbol</td>
+                                        <td>Ana Pérez</td>
+                                        <td>2024-06-15</td>
+                                        <td>Pagado</td>
+                                        <td><button class="btn btn-secondary">Ver Detalle</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sofía Pérez</td>
+                                        <td>Club de Robótica</td>
+                                        <td>Ana Pérez</td>
+                                        <td>2024-06-15</td>
+                                        <td>Pagado</td>
+                                        <td><button class="btn btn-secondary">Ver Detalle</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carlos Rodríguez</td>
+                                        <td>Taller de Música</td>
+                                        <td>Juan Rodríguez</td>
+                                        <td>2024-06-18</td>
+                                        <td>Pendiente</td>
+                                        <td><button class="btn btn-primary">Confirmar Pago</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

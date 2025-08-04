@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Sistema de Talleres</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .action-buttons a { text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <h2>Talleres Plus</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="talleres_disponibles.html">Talleres Disponibles</a></li>
+                    <li><a href="mis_inscripciones.html">Mis Inscripciones</a></li>
+                    <li><a href="calificaciones.html">Calificaciones</a></li>
+                    <li><a href="asistencia.html">Asistencia</a></li>
+                    <li><a href="notificaciones_usuario.html">Notificaciones</a></li>
+                    <li><a href="reportes_usuario.html">Reportes</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <span class="user-avatar">AP</span>
+                    <div class="user-info">
+                        <span class="user-name">Ana Pérez</span>
+                        <span class="user-role">Padre/Tutor</span>
+                    </div>
+                </div>
+                 <a href="index.html" class="logout-button">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Hola, Ana</h1>
+                <p>Bienvenida de nuevo. Aquí tienes un resumen de la actividad de tus hijos.</p>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Próximos Talleres</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="event">
+                            <div class="event-details">
+                                <p class="event-title">Taller de Fútbol</p>
+                                <p class="event-meta">Estudiante: Mateo Pérez</p>
+                            </div>
+                            <div class="event-time">
+                                <p>Mañana, 16:00</p>
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event-details">
+                                <p class="event-title">Club de Robótica</p>
+                                <p class="event-meta">Estudiante: Sofía Pérez</p>
+                            </div>
+                            <div class="event-time">
+                                <p>Miércoles, 15:30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Notificaciones Recientes</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="notification urgent">
+                            <p><strong>Cancelado:</strong> El taller de Arte de hoy ha sido cancelado por mal tiempo.</p>
+                        </div>
+                        <div class="notification warning">
+                            <p><strong>Recordatorio:</strong> El pago de la inscripción para el taller de Música vence en 3 días.</p>
+                        </div>
+                         <div class="notification info">
+                            <p><strong>Nuevo:</strong> Se abrió la inscripción para el Taller de Ajedrez.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-full-width">
+                     <div class="card-header">
+                        <h3>Acciones Rápidas</h3>
+                    </div>
+                    <div class="card-body action-buttons">
+                        <a href="talleres_disponibles.html"><button class="btn btn-primary">Inscribir a un Taller</button></a>
+                        <a href="calificaciones.html"><button class="btn btn-secondary">Ver Reporte de Calificaciones</button></a>
+                        <a href="mis_inscripciones.html"><button class="btn btn-secondary">Contactar a un Instructor</button></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

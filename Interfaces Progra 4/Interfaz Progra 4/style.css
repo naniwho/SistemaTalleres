@@ -1,0 +1,482 @@
+/* --- RESET Y CONFIGURACIÓN GLOBAL --- */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --secondary-color: #6c757d;
+    --light-bg: #f0f4f8;
+    --white-bg: #ffffff;
+    --font-color: #343a40;
+    --border-color: #dee2e6;
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    --font-family: 'Poppins', sans-serif;
+    /* Nuevas variables para botones de estado/peligro */
+    --danger-color: #dc3545; /* Rojo para acciones peligrosas */
+    --danger-hover: #c82333;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--light-bg);
+    color: var(--font-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- ESTILOS PÁGINA DE LOGIN --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: var(--white-bg);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-header .logo {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.login-header h1 {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.login-header p {
+    color: var(--secondary-color);
+    margin: 0 0 30px 0;
+    font-size: 16px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: var(--primary-hover);
+}
+
+.login-footer {
+    margin-top: 20px;
+}
+
+.login-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* --- ESTILOS PÁGINA DASHBOARD --- */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 260px;
+    background-color: var(--white-bg);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    z-index: 10;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px 30px 10px;
+}
+
+.sidebar-header .logo {
+    color: var(--primary-color);
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: block;
+    padding: 14px 20px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--light-bg);
+    color: var(--font-color);
+}
+
+.sidebar-nav li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.user-role {
+    font-size: 13px;
+    color: var(--secondary-color);
+}
+
+.logout-button {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto 0 auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+.logout-button:hover{
+    background-color: #e9ecef;
+}
+
+
+/* Contenido Principal */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.main-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.main-header p {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin: 0 0 40px 0;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 100%;
+}
+.card {
+    background-color: var(--white-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 25px;
+}
+
+.card.card-full-width {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.card-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.event, .notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.event:last-child, .notification:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.event-title {
+    font-weight: 600;
+    margin: 0;
+}
+.event-meta, .event-time {
+    font-size: 14px;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.notification p { margin: 0; }
+.notification.urgent { border-left: 4px solid #dc3545; padding-left: 15px;}
+.notification.warning { border-left: 4px solid #ffc107; padding-left: 15px;}
+.notification.info { border-left: 4px solid #17a2b8; padding-left: 15px;}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--light-bg);
+    color: var(--font-color);
+    border: 1px solid var(--border-color);
+}
+.btn-secondary:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+}
+
+/* --- ESTILOS para el botón de ELIMINAR (btn-danger) --- */
+.btn-danger {
+    background-color: var(--danger-color); /* Usamos la nueva variable */
+    color: white;
+    border: none; /* Asegura que no tenga borde si otros .btn lo tienen */
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-hover); /* Usamos la nueva variable */
+    transform: translateY(-2px); /* Mismo efecto de hover que otros botones */
+}
+/* --- ESTILOS PÁGINA DE SELECCIÓN DE TIPO DE USUARIO --- */
+.user-type-selection-modern {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.user-type-selection-modern .user-type-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+}
+
+.user-type-selection-modern .radio-wrapper {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.user-type-selection-modern .radio-wrapper:last-child {
+    margin-right: 0;
+}
+
+.user-type-selection-modern .radio-input {
+    display: none; /* Oculta el input de radio por defecto */
+}
+
+.user-type-selection-modern .radio-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    color: #555;
+}
+
+.user-type-selection-modern .radio-label svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    fill: currentColor;
+}
+
+.user-type-selection-modern .radio-input:checked + .radio-label {
+    border-color: var(--primary-color);
+    background-color: #f9f9f9;
+    color: var(--primary-color);
+}
+
+.user-type-selection-modern .radio-label:hover {
+    border-color: var(--primary-color);
+}
+/* Estilos adicionales para la selección de tipo de usuario en el login */
+.user-type-selection {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.user-type-selection label {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.user-type-selection input[type="radio"] {
+    margin-right: 5px;
+    accent-color: var(--primary-color);
+}
+
+/* Ajuste para el contenido de los botones en el card del admin dashboard */
+.card-body.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card-body.action-buttons .btn {
+    flex-grow: 1;
+    min-width: 150px;
+}
+/* --- ESTILOS PARA TABLAS DE GESTIÓN --- */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Para responsividad en móviles */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table thead th {
+    background-color: var(--light-bg);
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.data-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.data-table .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    /* Aseguramos que los botones dentro de la tabla tengan margen entre ellos */
+    margin-right: 5px; /* Espacio a la derecha */
+}
+
+/* Ajuste final para los botones dentro de la celda de acciones */
+.data-table td:last-child .btn:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último botón en la celda */
+}
