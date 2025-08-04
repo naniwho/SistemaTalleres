@@ -34,7 +34,7 @@ class TallerModel extends ConnectionDB {
     public static function setDuracion($duracion) { self::$duracion = $duracion; }
 
     /**
-     * Crear un nuevo taller
+     * Crear un nuevo taller (para el botón "Agregar Nuevo Taller")
      */
     final public static function post() {
         try {
@@ -60,11 +60,12 @@ class TallerModel extends ConnectionDB {
     }
 
     /**
-     * Obtener todos los talleres
+     * Obtener todos los talleres (para la "Lista de Talleres Activos")
      */
     final public static function getAll() {
         try {
             $con = self::getConnection();
+            // El procedimiento podría unir tablas para traer también el nombre del instructor
             $stmt = $con->prepare("CALL ConsultarTalleres()");
             $stmt->execute();
             return $stmt->fetchAll(\PDO::FETCH_ASSOC);
@@ -75,14 +76,13 @@ class TallerModel extends ConnectionDB {
     }
     
     /**
-     * Obtener un taller por su ID
+     * Obtener un taller por su ID (para cargar datos en el formulario de "Editar")
      */
     final public static function getById() {
         try {
             $con = self::getConnection();
             $stmt = $con->prepare("CALL ConsultarTallerPorID(:p_id_taller)");
             $stmt->execute([':p_id_taller' => self::getIdTaller()]);
-            
             $taller = $stmt->fetch(\PDO::FETCH_ASSOC);
 
             if ($taller) {
@@ -100,27 +100,15 @@ class TallerModel extends ConnectionDB {
             }
         } catch (\PDOException $e) {
             error_log("TallerModel::getById -> " . $e);
+            error_log("RESPUESTA getById: " . json_encode($taller));
+
             return \App\Config\responseHTTP::status500('Error al obtener el taller por ID.');
         }
     }
 
-    /**
-     * Obtener talleres por ID de instructor
-     */
-    final public static function getByInstructorId() {
-        try {
-            $con = self::getConnection();
-            $stmt = $con->prepare("CALL ConsultarTalleresPorInstructor(:p_id_instructor)");
-            $stmt->execute([':p_id_instructor' => self::getIdInstructor()]);
-            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        } catch (\PDOException $e) {
-            error_log("TallerModel::getByInstructorId -> " . $e);
-            die(json_encode(responseHTTP::status500()));
-        }
-    }
 
     /**
-     * Actualizar un taller
+     * Actualizar un taller (para el botón "Editar")
      */
     final public static function update() {
         try {
