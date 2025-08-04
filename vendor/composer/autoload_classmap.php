@@ -16,6 +16,8 @@ return array(
     'App\\Controllers\\UserController' => $baseDir . '/src/Controllers/UserController.php',
     'App\\DB\\ConnectionDB' => $baseDir . '/src/DB/ConnectionDB.php',
     'App\\DB\\Sql' => $baseDir . '/src/DB/Sql.php',
+    'App\\DB\\sql' => $baseDir . '/src/DB/sql.php',
+    'App\\Middleware\\AuthMiddleware' => $baseDir . '/src/Middleware/AuthMiddleware.php',
     'App\\Models\\AuthModel' => $baseDir . '/src/Models/AuthModel.php',
     'App\\Models\\TallerModel' => $baseDir . '/src/Models/TallerModel.php',
     'App\\Models\\UserModel' => $baseDir . '/src/Models/UserModel.php',

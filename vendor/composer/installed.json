@@ -159,6 +159,8 @@
                 }
             },
             "installation-source": "dist",
+
+
             "autoload": {
                 "files": [
                     "autoload.php"
